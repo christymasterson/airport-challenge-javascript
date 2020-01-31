@@ -12,7 +12,7 @@ describe('Weather',function(){
   });
 
   it('gives not stormy other times', function(){
-     spyOn(Math,'random').and.returnValue(0);
-     expect(weather.isStormy()).toBeFalsy();
-   });
+    spyOn(Math,'random').and.returnValue(0);
+    expect(weather.isStormy()).toBeFalsy();
+  });
 });

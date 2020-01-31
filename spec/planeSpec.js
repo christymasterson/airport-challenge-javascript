@@ -15,7 +15,7 @@ describe("Plane", function() {
     });
 
     it('can land at an airport', function(){
-      plane.land(airport);
+      plane.landPlane(airport);
       expect(airport.clearForLanding).toHaveBeenCalledWith(plane);
     });
   });

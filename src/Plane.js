@@ -3,7 +3,7 @@
 class Plane {
   constructor() {}
 
-  landPlane(){
-    return true;
+  landPlane(airport){
+    airport.clearForLanding(this)
   };
 }

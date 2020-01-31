@@ -10,7 +10,7 @@ describe('Feature test', function(){
   });
 
   it('planes land at an airport', function(){
-    plane.land(airport);
+    plane.landPlane(airport);
     expect(airport.planes()).toContain(plane);
   });
 });

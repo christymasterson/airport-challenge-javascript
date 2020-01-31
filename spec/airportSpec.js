@@ -6,10 +6,10 @@ describe('Airport', function(){
 
   beforeEach(function(){
     airport = new Airport;
-    plane = jasmine.createSpyObj('plane', ['landPlane'])
-  })
+    plane = jasmine.createSpy('plane', ['landPlane'])
+  });
 
-  it('airport is initially empty', function(){
+  it('has no planes by default', function(){
     expect(airport.planes()).toEqual([]);
   });
 

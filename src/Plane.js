@@ -1,9 +1,6 @@
-'use strict';
 
 class Plane {
-  constructor() {}
-
-  landPlane(airport){
+  landPlane(airport) {
     airport.clearForLanding(this)
   };
-}
+};

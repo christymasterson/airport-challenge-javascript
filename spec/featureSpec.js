@@ -19,4 +19,13 @@ describe('Feature test', function(){
     plane.takeOffPlane(airport);
     expect(airport.planes()).not.toContain(plane);
   });
+
+  it('throws an error when trying to add a the 21st plane', function() {
+    for (var i = 0; i < 20; i++) {
+      plane.landPlane(airport);
+    }
+    expect(plane.landPlane(airport)).toThrowError("Airport is full");
+  });
+
+
 });

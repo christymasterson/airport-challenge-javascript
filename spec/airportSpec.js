@@ -24,5 +24,11 @@ describe('Airport', function(){
     expect(airport.planes()).toEqual([]);
   });
 
+  it('throws an error when trying to add a the 21st plane', function() {
+    for (var i = 0; i < 20; i++) {
+      airport.clearForLanding(plane);
+    }
+    expect(airport.clearForLanding(plane)).toThrowError("Airport is full");
+  });
 
 });

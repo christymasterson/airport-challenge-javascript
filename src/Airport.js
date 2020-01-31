@@ -2,15 +2,23 @@
 
 class Airport{
   constructor() {
-    this._hangar = []
+    this.hangar = []
+    this.AIRPORT_CAPACITY = 20
   }
   planes() {
-    return this._hangar;
+    return this.hangar;
   }
   clearForLanding(plane) {
-    this._hangar.push(plane);
+    if (this.isAirportFull()) {
+      throw new Error("Airport is full");
+    }
+    this.hangar.push(plane);
   };
   clearForTakeOff(plane) {
-    this._hangar  = [];
+    this.hangar  = [];
   };
+
+  isAirportFull() {
+    return this.hangar.length === this.AIRPORT_CAPACITY;
+  }
 };

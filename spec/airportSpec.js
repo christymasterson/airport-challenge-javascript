@@ -28,7 +28,7 @@ describe('Airport', function(){
     for (var i = 0; i < 20; i++) {
       airport.clearForLanding(plane);
     }
-    expect(airport.clearForLanding(plane)).toThrowError("Airport is full");
+    expect(function() { airport.clearForLanding(plane)} ).toThrowError("Airport is full");
   });
 
 });

@@ -24,7 +24,7 @@ describe('Feature test', function(){
     for (var i = 0; i < 20; i++) {
       plane.landPlane(airport);
     }
-    expect(plane.landPlane(airport)).toThrowError("Airport is full");
+    expect(function() {plane.landPlane(airport)}).toThrowError("Airport is full");
   });
 
 

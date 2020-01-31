@@ -8,7 +8,7 @@ class Plane {
     this._location = airport
   };
 
-  takeOffPlane() {
+  takeOffPlane(airport) {
     this._location.clearForTakeOff(this)
   };
 };
